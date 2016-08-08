@@ -32,6 +32,9 @@ Pod::Spec.new do |s|
   s.public_header_files = 'objcFingerPrint/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
 
-#  s.dependency 'objcView'
+  s.dependency 'objcBlock'
+  s.dependency 'objcWindow'
+  s.dependency 'objcView'
+
 
 end

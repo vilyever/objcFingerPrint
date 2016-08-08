@@ -17,6 +17,15 @@ NSString *const VDFingerPrintViewControllerNotificationUnlock = @"VDFingerPrintV
 
 @interface VDFingerPrintViewController ()
 
+- (void)__i__appWillResignActive:(NSNotification *)notification;
+- (void)__i__appDidEnterBackground:(NSNotification *)notification;
+- (void)__i__appWillEnterForeground:(NSNotification *)notification;
+- (void)__i__appDidBecomeActive:(NSNotification *)notification;
+
+- (void)__i__onTap;
+- (void)__i__show;
+- (void)__i__checkFingerPrint;
+
 @property (nonatomic, assign) BOOL isShowing;
 
 @property (nonatomic, assign) NSInteger registerCount;
@@ -60,7 +69,7 @@ NSString *const VDFingerPrintViewControllerNotificationUnlock = @"VDFingerPrintV
     }
 }
 
-- (void)onFingerPrintNoSupport {
+- (void)fingerPrintDidUnsupport {
     
 }
 
@@ -207,7 +216,7 @@ NSString *const VDFingerPrintViewControllerNotificationUnlock = @"VDFingerPrintV
         }];
     }
     else {
-        [self onFingerPrintNoSupport];
+        [self fingerPrintDidUnsupport];
     }
 }
 

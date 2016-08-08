@@ -25,7 +25,7 @@ extern NSString *const VDFingerPrintViewControllerNotificationUnlock;
 - (void)show;
 - (void)check;
 
-- (void)onFingerPrintNoSupport;
+- (void)fingerPrintDidUnsupport;
 
 #pragma mark Properties
 @property (nonatomic, assign) BOOL isLock;
